@@ -1,0 +1,19 @@
+<div class="container ask">
+  <p><%= @ask %></p>
+  <p> - You</p>
+</div>
+
+<div class="container answer">
+  <% if @ask.downcase == "i am going to work" %>
+    <p>Great!</p>
+  <% elsif @ask.end_with?("?") %>
+    <p>Silly question, get dressed and go to work!</p>
+  <% else %>
+    <p>I don't care, get dresed and go to work!</p>
+  <% end %>
+  <p>- Sincerely, Your Coach</p>
+</div>
+
+<div class="container">
+  <%= link_to "ask a new question", ask_path, class: "ask-link"%>
+</div>
